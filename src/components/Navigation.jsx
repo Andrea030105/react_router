@@ -28,6 +28,9 @@ function Navigation() {
         <NavLink to="/users" className={navLinkClasses}>
           Users
         </NavLink>
+        <NavLink to="/dashboard" className={navLinkClasses}>
+          Dashboard
+        </NavLink>
       </div>
     </nav>
   );
