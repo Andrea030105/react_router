@@ -18,12 +18,15 @@ function Navigation() {
       </Link>
 
       <div className="flex items-center gap-2">
-        <NavLink to="/About" className={navLinkClasses}>
+        <NavLink to="/about" className={navLinkClasses}>
           About
         </NavLink>
 
-        <NavLink to="/Contacts" className={navLinkClasses}>
+        <NavLink to="/contacts" className={navLinkClasses}>
           Contacts
+        </NavLink>
+        <NavLink to="/users" className={navLinkClasses}>
+          Users
         </NavLink>
       </div>
     </nav>
