@@ -7,6 +7,7 @@ import UserId from "./components/UserId";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Overview from "./components/dashboard/Overview";
 import Account from "./components/dashboard/Account";
+import NotFoundPage from "./components/NotFoundPage";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -24,6 +25,7 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="account" element={<Account />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
