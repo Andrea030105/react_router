@@ -8,6 +8,7 @@ import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Overview from "./components/dashboard/Overview";
 import Account from "./components/dashboard/Account";
 import NotFoundPage from "./components/NotFoundPage";
+import ProtectedPage from "./components/ProtectedPage";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -21,7 +22,14 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />;
         <Route path="/users" element={<Users />} />;
         <Route path="/user/:id" element={<UserId />} />;
-        <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedPage>
+              <DashboardLayout />
+            </ProtectedPage>
+          }
+        >
           <Route index element={<Overview />} />
           <Route path="account" element={<Account />} />
         </Route>
